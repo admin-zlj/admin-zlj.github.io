@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://admin-zlj.github.io/List/gallery/index.html</loc>
+    
+    <lastmod>2022-03-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://admin-zlj.github.io/List/gallery/wallpaper/index.html</loc>
+    
+    <lastmod>2022-03-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://admin-zlj.github.io/List/gallery/DragonBall/index.html</loc>
     
-    <lastmod>2022-03-28</lastmod>
+    <lastmod>2022-03-29</lastmod>
     
   </url>
   
@@ -58,20 +72,6 @@
   </url>
   
   <url>
-    <loc>https://admin-zlj.github.io/List/gallery/index.html</loc>
-    
-    <lastmod>2022-03-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://admin-zlj.github.io/List/gallery/wallpaper/index.html</loc>
-    
-    <lastmod>2022-03-28</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://admin-zlj.github.io/music/index.html</loc>
     
     <lastmod>2022-03-28</lastmod>
@@ -95,7 +95,7 @@
 
   <url>
     <loc>https://admin-zlj.github.io/</loc>
-    <lastmod>2022-03-28</lastmod>
+    <lastmod>2022-03-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -103,7 +103,7 @@
   
   <url>
     <loc>https://admin-zlj.github.io/tags/%E6%83%B3%E6%B3%95/</loc>
-    <lastmod>2022-03-28</lastmod>
+    <lastmod>2022-03-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -112,7 +112,7 @@
   
   <url>
     <loc>https://admin-zlj.github.io/categories/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2022-03-28</lastmod>
+    <lastmod>2022-03-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
