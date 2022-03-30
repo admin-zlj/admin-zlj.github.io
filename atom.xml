@@ -6,7 +6,7 @@
   <link href="https://admin-zlj.github.io/atom.xml" rel="self"/>
   
   <link href="https://admin-zlj.github.io/"/>
-  <updated>2022-03-30T09:32:55.602Z</updated>
+  <updated>2022-03-30T14:52:29.717Z</updated>
   <id>https://admin-zlj.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端初学者node会这些就可以了 Nodejs入门</title>
+    <link href="https://admin-zlj.github.io/posts/9917d3f9.html"/>
+    <id>https://admin-zlj.github.io/posts/9917d3f9.html</id>
+    <published>2022-03-30T14:00:00.000Z</published>
+    <updated>2022-03-30T14:52:29.717Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Nodejs"><a href="#Nodejs" class="headerlink" title="Nodejs"></a>Nodejs</h1><h1 id="一、Nodejs介绍与安装"><a href="#一、Nodejs介绍与安装" class="headerlink" title="一、Nodejs介绍与安装"></a>一、Nodejs介绍与安装</h1><blockquote><p>介绍：</p><ol><li>Node 是一个让 JavaScript 运行在服务端的开发平台。</li><li><strong>简单的说 Node.js 就是运行在服务端的 JavaScript。</strong> Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台。</li><li>Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引擎，V8引擎执行Javascript的速度非常快，性能非常好。</li></ol></blockquote><p>总而言之：<br><font color="#FF4545">Node.js是可以脱离浏览器环境运行的JavaScript程序，且基于V8 引擎</font><br>下载地址： <a href="http://nodejs.cn/">http://nodejs.cn/</a><br>安装：默认安装，无脑下一步<br>查看是否安装成功：</p><pre class="line-numbers language-none"><code class="language-none">node -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://img-blog.csdnimg.cn/c61e56a04b684137bb9fb86af3625f72.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAYWRtaW5femxq,size_17,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>再命令行执行命令，如果出现版本号即为安装成功</p><h1 id="二、Nodejs入门"><a href="#二、Nodejs入门" class="headerlink" title="二、Nodejs入门"></a>二、Nodejs入门</h1><h2 id="1-运行的JavaScript程序"><a href="#1-运行的JavaScript程序" class="headerlink" title="1.运行的JavaScript程序"></a>1.运行的JavaScript程序</h2><p>1、创建 helloworld.js</p><pre class="line-numbers language-js" data-language="js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hello World!!!'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>2、命令行执行命令</p><pre class="line-numbers language-none"><code class="language-none">node helloworld.js<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>运行结果：hello world!!</p><h2 id="2-Node安装依赖包"><a href="#2-Node安装依赖包" class="headerlink" title="2.Node安装依赖包"></a>2.Node安装依赖包</h2><p>命令：</p><pre class="line-numbers language-none"><code class="language-none">npm install 依赖包名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>示例：</p><pre class="line-numbers language-none"><code class="language-none">npm install mysql (安装mysql依赖)npm install vue (安装vue依赖)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><hr><h1 id="三、Node-实现请求响应（模拟Taomcat服务器）"><a href="#三、Node-实现请求响应（模拟Taomcat服务器）" class="headerlink" title="三、Node 实现请求响应（模拟Taomcat服务器）"></a>三、Node 实现请求响应（模拟Taomcat服务器）</h1><p>1、创建 httpserver.js ；</p><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// require是导入模块，这个模块是node内置模块,也可以是自定义模块</span><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 创建一个httpserver服务</span>http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span>response</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment">//浏览器将 以text-plain去解析数据。</span>    response<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">'Content-type'</span><span class="token operator">:</span><span class="token string">'text/plain'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// 浏览器输出的内容</span>    response<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">"&lt;h1&gt;hello word!!!&lt;/h1&gt;"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8888</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 监听端口8888</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"http://localhpst:8888 启动成功!!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>2、运行服务器程序；</p><pre class="line-numbers language-none"><code class="language-none">node httpserver.js<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>3、在浏览器中输入：<a href="http://localhost:8888/">http://localhost:8888</a><br>4、停止服务：ctrl + c</p><pre class="line-numbers language-none"><code class="language-none">浏览器显示：hello word!!!<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Nodejs&quot;&gt;&lt;a href=&quot;#Nodejs&quot; class=&quot;headerlink&quot; title=&quot;Nodejs&quot;&gt;&lt;/a&gt;Nodejs&lt;/h1&gt;&lt;h1 id=&quot;一、Nodejs介绍与安装&quot;&gt;&lt;a href=&quot;#一、Nodejs介绍与安装&quot; class=&quot;he</summary>
+      
+    
+    
+    
+    <category term="笔记" scheme="https://admin-zlj.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="前端" scheme="https://admin-zlj.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="node.js" scheme="https://admin-zlj.github.io/tags/node-js/"/>
+    
+  </entry>
   
   <entry>
     <title>初学者福音 轻松拿捏Flex布局，附有九宫格案列</title>

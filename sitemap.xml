@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://admin-zlj.github.io/posts/9917d3f9.html</loc>
+    
+    <lastmod>2022-03-30</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://admin-zlj.github.io/about/index.html</loc>
     
     <lastmod>2022-03-30</lastmod>
@@ -151,6 +158,13 @@
   </url>
   
   <url>
+    <loc>https://admin-zlj.github.io/tags/css3/</loc>
+    <lastmod>2022-03-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://admin-zlj.github.io/tags/css/</loc>
     <lastmod>2022-03-30</lastmod>
     <changefreq>daily</changefreq>
@@ -165,7 +179,7 @@
   </url>
   
   <url>
-    <loc>https://admin-zlj.github.io/tags/css3/</loc>
+    <loc>https://admin-zlj.github.io/tags/node-js/</loc>
     <lastmod>2022-03-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
