@@ -1,0 +1,514 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>初学者福音 轻松拿捏Flex布局，附有九宫格案列 | 木水の博客</title><meta name="keywords" content="html,前端,css,flex"><meta name="author" content="木水"><meta name="copyright" content="木水"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="传统布局 基于盒状模型，依赖 display属性 + position属性 + float属性  对于那些特殊布局非常不方便，例如：垂直居中就不容易实现。    Flex布局 Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。  任何一个容器都可以指定为Flex布局。  采用Flex布局的元素，称为Flex容器。所有子元素为容器成员，称为flex item">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初学者福音 轻松拿捏Flex布局，附有九宫格案列">
+<meta property="og:url" content="https://admin-zlj.github.io/posts/e2294b51.html">
+<meta property="og:site_name" content="木水の博客">
+<meta property="og:description" content="传统布局 基于盒状模型，依赖 display属性 + position属性 + float属性  对于那些特殊布局非常不方便，例如：垂直居中就不容易实现。    Flex布局 Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。  任何一个容器都可以指定为Flex布局。  采用Flex布局的元素，称为Flex容器。所有子元素为容器成员，称为flex item">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/9468253c896f4e99a0afd8e0aeb46ea9.png">
+<meta property="article:published_time" content="2022-03-30T10:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-30T09:32:55.602Z">
+<meta property="article:author" content="木水">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="flex">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/9468253c896f4e99a0afd8e0aeb46ea9.png"><link rel="shortcut icon" href="https://pic.lienav.com/i/2022/03/28/6241c192287a2.png"><link rel="canonical" href="https://admin-zlj.github.io/posts/e2294b51"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"一年之内的产物","messageNext":"技术可能存在过期"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 木水","link":"链接: ","source":"来源: 木水の博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '初学者福音 轻松拿捏Flex布局，附有九宫格案列',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-30 17:32:55'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><link defer rel="stylesheet" href="/css/customm.css" ><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/icon.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/background.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/index_ee.css"><meta name="generator" content="Hexo 5.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="木水の博客" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.lienav.com/i/2022/03/28/6241c18f881b7.png" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 归档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时轴</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/tools/"><i class="fa-fw fa fa-suitcase"></i><span> 百宝箱</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://img-blog.csdnimg.cn/9468253c896f4e99a0afd8e0aeb46ea9.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">木水の博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 归档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时轴</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/tools/"><i class="fa-fw fa fa-suitcase"></i><span> 百宝箱</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">初学者福音 轻松拿捏Flex布局，附有九宫格案列</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-30T10:00:00.000Z" title="发表于 2022-03-30 18:00:00">2022-03-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-30T09:32:55.602Z" title="更新于 2022-03-30 17:32:55">2022-03-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="初学者福音 轻松拿捏Flex布局，附有九宫格案列"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="传统布局"><a href="#传统布局" class="headerlink" title="传统布局"></a>传统布局</h1><ul>
+<li><p>基于盒状模型，依赖 display属性 + position属性 + float属性</p>
+</li>
+<li><p>对于那些特殊布局非常不方便，例如：垂直居中就不容易实现。</p>
+<hr>
+</li>
+</ul>
+<h1 id="Flex布局"><a href="#Flex布局" class="headerlink" title="Flex布局"></a>Flex布局</h1><ul>
+<li><p><strong>Flex</strong>是Flexible Box的缩写，意为”<strong>弹性布局</strong>”，用来为盒状模型提供最大的灵活性。<br>  任何一个容器都可以指定为Flex布局。</p>
+</li>
+<li><p>采用Flex布局的元素，称为Flex容器。所有子元素为容器成员，称为flex item。</p>
+</li>
+<li><p>容器默认存在<strong>两根轴</strong>：水平的主轴（<strong>main axis</strong>）和垂直交叉轴（<strong>cross axis</strong>）。<br><font color="red"> 为了方便理解 我称水平主轴为横轴，垂直交叉轴为竖轴</font></p>
+</li>
+</ul>
+<ol>
+<li>主轴的开始位置(如图) ：<strong>main start</strong>，结束位置：<strong>main end</strong>；<ol start="2">
+<li>垂直交叉轴的开始位置：<strong>cross start</strong>，结束位置：<strong>cross end</strong>。（<strong>项目默认沿主轴排列</strong>）</li>
+<li><strong>单个项目</strong>占据的主轴空间：<strong>main size</strong>，占据的交叉轴空间：<strong>cross size</strong>。</li>
+</ol>
+</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img-blog.csdnimg.cn/82dc1e4aa41644b49505ba1fb9a6644a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAYWRtaW5femxq,size_20,color_FFFFFF,t_70,g_se,x_16#pic_left" alt="在这里插入图片描述"></p>
+<h2 id="一-容器-flex-container-的属性"><a href="#一-容器-flex-container-的属性" class="headerlink" title="一. 容器(flex-container)的属性"></a>一. 容器(flex-container)的属性</h2><p>以下6个属性是设置在容器上的。（<strong>注意：是flex-container的属性，不是flex-item的属性</strong>）</p>
+<blockquote>
+<ol>
+<li>flex-direction </li>
+<li>flex-wrap</li>
+<li>flex-flow </li>
+<li>justify-content</li>
+<li>align-items</li>
+<li>align-content</li>
+</ol>
+</blockquote>
+<h3 id="1-1-flex-direction属性"><a href="#1-1-flex-direction属性" class="headerlink" title="1.1 flex-direction属性"></a>1.1 flex-direction属性</h3><p>flex-direction属性决定横轴的方向（即项目的排列方向）。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.box</span> <span class="token punctuation">{</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> row | row-reverse | column | column-reverse<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+row（默认值）：横轴为水平方向，起点在左端。
+row-reverse：横轴为水平方向，起点在右端。
+column：横轴为垂直方向，起点在上沿。
+column-reverse：横轴为垂直方向，起点在下沿。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p> <img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img-blog.csdnimg.cn/8b9e2a9b653f47ffa518fa5450e6db44.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAYWRtaW5femxq,size_20,color_FFFFFF,t_70,g_se,x_16#pic_left" alt="在这里插入图片描述"></p>
+<h3 id="1-2-flex-wrap属性"><a href="#1-2-flex-wrap属性" class="headerlink" title="1.2 flex-wrap属性"></a>1.2 flex-wrap属性</h3><p>默认情况下，flex-item都排在一条线上。flex-wrap属性决定是否换行。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.box</span><span class="token punctuation">{</span>
+  <span class="token property">flex-wrap</span><span class="token punctuation">:</span> nowrap | wrap | wrap-reverse<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+nowrap（默认）：不换行
+wrap：换行，第一行在上方。
+wrap-reverse：换行，第一行在下方。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>nowrap（默认）：<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img-blog.csdnimg.cn/337b2010f66948a28f237a3c56acfbf6.png#pic_left" alt="在这里插入图片描述">    </p>
+<p>wrap：<br><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img-blog.csdnimg.cn/2867531d855040fd9166a1aa7bedd511.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAYWRtaW5femxq,size_20,color_FFFFFF,t_70,g_se,x_16#pic_left" alt="在这里插入图片描述">wrap-reverse：<br><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img-blog.csdnimg.cn/25f06d4ddde14fac8181dfa28613b333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAYWRtaW5femxq,size_20,color_FFFFFF,t_70,g_se,x_16#pic_left" alt="在这里插入图片描述"></p>
+<h3 id="1-3-flex-flow"><a href="#1-3-flex-flow" class="headerlink" title="1.3 flex-flow"></a>1.3 flex-flow</h3><p>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。<br>也就是说为了方便<strong>flex-flow可以同时控制这两种属性</strong><br><strong>(具体传参形式比较繁琐，不推荐)</strong></p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.box</span> <span class="token punctuation">{</span>
+  <span class="token property">flex-flow</span><span class="token punctuation">:</span> &lt;flex-direction&gt; &lt;flex-wrap&gt;<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="1-4-justify-content属性"><a href="#1-4-justify-content属性" class="headerlink" title="1.4  justify-content属性"></a>1.4  justify-content属性</h3><p>justify-content属性定义了<strong>flex-item</strong>在<strong>横轴</strong>上的<strong>对齐方式</strong>。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.box</span> <span class="token punctuation">{</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> flex-start | flex-end | center | space-between | space-around<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+flex-start（默认值）：左对齐
+flex-end：右对齐
+center： 居中
+space-between：两端对齐，项目之间的间隔都相等。
+space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。		<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img-blog.csdnimg.cn/33895d61db914cca8456b2f0f48c1156.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAYWRtaW5femxq,size_20,color_FFFFFF,t_70,g_se,x_16#pic_left" alt="在这里插入图片描述"></p>
+<h3 id="1-5-align-items属性"><a href="#1-5-align-items属性" class="headerlink" title="1.5 align-items属性"></a>1.5 align-items属性</h3><p>align-items属性定义项目在<strong>竖轴</strong>上如何对齐。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.box</span> <span class="token punctuation">{</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> flex-start | flex-end | center | baseline | stretch<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+flex-start：竖轴的起点对齐。
+flex-end：竖轴的终点对齐。
+center：竖轴的中点对齐。
+<span class="token property">baseline</span><span class="token punctuation">:</span> flex-item 的第一行文字的基线对齐。
+stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img-blog.csdnimg.cn/5cd0f93350524fd3848e6920e6b24e55.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAYWRtaW5femxq,size_19,color_FFFFFF,t_70,g_se,x_16#pic_left" alt="在这里插入图片描述"></p>
+<hr>
+<h2 id="二、项目-flex-item-的属性"><a href="#二、项目-flex-item-的属性" class="headerlink" title="二、项目(flex-item)的属性"></a>二、项目(flex-item)的属性</h2><p>以下6个属性设置在项目上。</p>
+<blockquote>
+<ol>
+<li>order</li>
+<li>flex-grow</li>
+<li>flex-shrink</li>
+<li>flex-basis</li>
+<li>flex</li>
+<li>align-self</li>
+</ol>
+</blockquote>
+<h3 id="2-1-order属性"><a href="#2-1-order属性" class="headerlink" title="2.1 order属性"></a>2.1 order属性</h3><p>order属性定义<strong>flex-item</strong>的排列顺序。数值越小，排列越靠前，默认为0。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.item</span> <span class="token punctuation">{</span>
+  <span class="token property">order</span><span class="token punctuation">:</span> &lt;integer&gt;<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img-blog.csdnimg.cn/3338441983d74c1fbe43f884364d0395.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAYWRtaW5femxq,size_20,color_FFFFFF,t_70,g_se,x_16#pic_left" alt="在这里插入图片描述"></p>
+<h3 id="2-2-flex-grow属性"><a href="#2-2-flex-grow属性" class="headerlink" title="2.2 flex-grow属性"></a>2.2 flex-grow属性</h3><p>flex-grow属性定义flex-item的放大比例，默认为0。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.item</span> <span class="token punctuation">{</span>
+  <span class="token property">flex-grow</span><span class="token punctuation">:</span> &lt;number&gt;<span class="token punctuation">;</span> <span class="token comment">/* default 0 */</span>
+<span class="token punctuation">}</span>
+
+如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img-blog.csdnimg.cn/60e7a1ffd02a49f4aeaf7454f5d2c67f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAYWRtaW5femxq,size_20,color_FFFFFF,t_70,g_se,x_16#pic_left" alt="在这里插入图片描述"></p>
+<h3 id="2-3-flex-shrink属性"><a href="#2-3-flex-shrink属性" class="headerlink" title="2.3 flex-shrink属性"></a>2.3 flex-shrink属性</h3><p>flex-shrink属性定义了flex-item的缩小比例，默认为1。**(负值对该属性无效。)**<br>与放大类似，不赘述</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.item</span> <span class="token punctuation">{</span>
+  <span class="token property">flex-shrink</span><span class="token punctuation">:</span> &lt;number&gt;<span class="token punctuation">;</span> <span class="token comment">/* default 1 */</span>
+<span class="token punctuation">}</span>	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-4-flex-basis属性"><a href="#2-4-flex-basis属性" class="headerlink" title="2.4 flex-basis属性"></a>2.4 flex-basis属性</h3><p>flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。<br><strong>简单的说就是设置flex-item的宽度</strong></p>
+<p><strong><font color="#FF7B57">flex布局中宽度的优先级:min-width/max-width  &gt;  flex-basis  &gt;  width  &gt;  内容支撑</font></strong></p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.item</span> <span class="token punctuation">{</span>
+  <span class="token property">flex-basis</span><span class="token punctuation">:</span> &lt;length&gt; | auto<span class="token punctuation">;</span> <span class="token comment">/* default auto */</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-5-flex属性"><a href="#2-5-flex属性" class="headerlink" title="2.5 flex属性"></a>2.5 flex属性</h3><p>flex属性是flex-grow, flex-shrink 和 flex-basis的简写。**(具体传参形式比较繁琐，不推荐)**</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.item</span> <span class="token punctuation">{</span>
+  <span class="token property">flex</span><span class="token punctuation">:</span> none | [ &lt;<span class="token string">'flex-grow'</span>&gt; &lt;<span class="token string">'flex-shrink'</span>&gt;? || &lt;<span class="token string">'flex-basis'</span>&gt; ]
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-6-align-self属性"><a href="#2-6-align-self属性" class="headerlink" title="2.6 align-self属性"></a>2.6 align-self属性</h3><p>align-self属性允许单个<strong>flex-item</strong>有与其他项目不一样的对齐方式，可覆盖align-items属性。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.item</span> <span class="token punctuation">{</span>
+  <span class="token property">align-self</span><span class="token punctuation">:</span> auto | flex-start | flex-end | center | baseline | stretch<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+取值与align-items相同<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img-blog.csdnimg.cn/d0a2a2131e6c4b81965c1096bf249216.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAYWRtaW5femxq,size_20,color_FFFFFF,t_70,g_se,x_16#pic_left" alt="在这里插入图片描述"></p>
+<hr>
+<p>​    </p>
+<h2 id="三、九宫格案列"><a href="#三、九宫格案列" class="headerlink" title="三、九宫格案列"></a>三、九宫格案列</h2><blockquote>
+<p><strong>学过flex布局，九宫格轻轻松松搞定！position，float 都不需要</strong></p>
+<p><strong>相对于传统布局真的方便很多</strong></p>
+</blockquote>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+        <span class="token selector">.flex-box</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+            <span class="token property">height</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+            <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+            <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+            <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
+            <span class="token property">justify-content</span><span class="token punctuation">:</span> space-evenly<span class="token punctuation">;</span>
+            <span class="token property">align-content</span><span class="token punctuation">:</span>space-evenly<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector">.flex-item</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+            <span class="token property">height</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector">.blue</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">background-color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector">.green</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">background-color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector">.orange</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">background-color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-item orange<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-item green<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-item blue<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-item green<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-item blue<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-item orange<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-item blue<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-item orange<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-item green<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img-blog.csdnimg.cn/9468253c896f4e99a0afd8e0aeb46ea9.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAYWRtaW5femxq,size_20,color_FFFFFF,t_70,g_se,x_16#pic_left" alt="在这里插入图片描述"></p>
+<hr>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><blockquote>
+<p><font color="#E33D10"><strong>本文参考菜鸟<a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/flex-grammar.html">https://www.runoob.com/w3cnote/flex-grammar.html</a> 编写，其中加入一些自己的想法，也有许多不同，也更加方便初学者理解</strong></font></p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">木水</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://admin-zlj.github.io/posts/e2294b51.html">https://admin-zlj.github.io/posts/e2294b51.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://admin-zlj.github.io" target="_blank">木水の博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/html/">html</a><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><a class="post-meta__tags" href="/tags/css/">css</a><a class="post-meta__tags" href="/tags/flex/">flex</a></div><div class="post_share"><div class="social-share" data-image="https://img-blog.csdnimg.cn/9468253c896f4e99a0afd8e0aeb46ea9.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://pic.lienav.com/i/2022/03/28/6241c19361e73.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.lienav.com/i/2022/03/28/6241c19361e73.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://pic.lienav.com/i/2022/03/28/6241c18ff18bd.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.lienav.com/i/2022/03/28/6241c18ff18bd.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/a6d0cf2a.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.lienav.com/i/2022/03/30/624411d12844a.png" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">css3的新特性</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/a6d0cf2a.html" title="css3的新特性"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.lienav.com/i/2022/03/30/624411d12844a.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-30</div><div class="title">css3的新特性</div></div></a></div><div><a href="/posts/d873d49c.html" title="H5的新特性"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.lienav.com/i/2022/03/30/624411d12844a.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-30</div><div class="title">H5的新特性</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.lienav.com/i/2022/03/28/6241c18f881b7.png" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">木水</div><div class="author-info__description">本科 | 河南科技大学 | 软件工程 </div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" href="https://admin-zlj.github.io/"><i class="fa fa-home"></i><span>个人主页</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/admin-zlj" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=xxxxxxx&amp;website=www.qtxml.cn" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">兴趣爱好才是最大的动力，何不与我共同来攀知识高峰，品翘楚美人！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%A0%E7%BB%9F%E5%B8%83%E5%B1%80"><span class="toc-number">1.</span> <span class="toc-text">传统布局</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Flex%E5%B8%83%E5%B1%80"><span class="toc-number">2.</span> <span class="toc-text">Flex布局</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E5%AE%B9%E5%99%A8-flex-container-%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">2.1.</span> <span class="toc-text">一. 容器(flex-container)的属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-flex-direction%E5%B1%9E%E6%80%A7"><span class="toc-number">2.1.1.</span> <span class="toc-text">1.1 flex-direction属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-flex-wrap%E5%B1%9E%E6%80%A7"><span class="toc-number">2.1.2.</span> <span class="toc-text">1.2 flex-wrap属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-flex-flow"><span class="toc-number">2.1.3.</span> <span class="toc-text">1.3 flex-flow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-justify-content%E5%B1%9E%E6%80%A7"><span class="toc-number">2.1.4.</span> <span class="toc-text">1.4  justify-content属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-align-items%E5%B1%9E%E6%80%A7"><span class="toc-number">2.1.5.</span> <span class="toc-text">1.5 align-items属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%A1%B9%E7%9B%AE-flex-item-%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">2.2.</span> <span class="toc-text">二、项目(flex-item)的属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-order%E5%B1%9E%E6%80%A7"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.1 order属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-flex-grow%E5%B1%9E%E6%80%A7"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2 flex-grow属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-flex-shrink%E5%B1%9E%E6%80%A7"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.3 flex-shrink属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-flex-basis%E5%B1%9E%E6%80%A7"><span class="toc-number">2.2.4.</span> <span class="toc-text">2.4 flex-basis属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-flex%E5%B1%9E%E6%80%A7"><span class="toc-number">2.2.5.</span> <span class="toc-text">2.5 flex属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-align-self%E5%B1%9E%E6%80%A7"><span class="toc-number">2.2.6.</span> <span class="toc-text">2.6 align-self属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%B9%9D%E5%AE%AB%E6%A0%BC%E6%A1%88%E5%88%97"><span class="toc-number">2.3.</span> <span class="toc-text">三、九宫格案列</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/e2294b51.html" title="初学者福音 轻松拿捏Flex布局，附有九宫格案列"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img-blog.csdnimg.cn/9468253c896f4e99a0afd8e0aeb46ea9.png" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="初学者福音 轻松拿捏Flex布局，附有九宫格案列"/></a><div class="content"><a class="title" href="/posts/e2294b51.html" title="初学者福音 轻松拿捏Flex布局，附有九宫格案列">初学者福音 轻松拿捏Flex布局，附有九宫格案列</a><time datetime="2022-03-30T10:00:00.000Z" title="发表于 2022-03-30 18:00:00">2022-03-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/a6d0cf2a.html" title="css3的新特性"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.lienav.com/i/2022/03/30/624411d12844a.png" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="css3的新特性"/></a><div class="content"><a class="title" href="/posts/a6d0cf2a.html" title="css3的新特性">css3的新特性</a><time datetime="2022-03-30T09:00:00.000Z" title="发表于 2022-03-30 17:00:00">2022-03-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d873d49c.html" title="H5的新特性"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.lienav.com/i/2022/03/30/624411d12844a.png" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="H5的新特性"/></a><div class="content"><a class="title" href="/posts/d873d49c.html" title="H5的新特性">H5的新特性</a><time datetime="2022-03-30T09:00:00.000Z" title="发表于 2022-03-30 17:00:00">2022-03-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d95d7e09.html" title="我的第一篇博客"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://pic.lienav.com/i/2022/03/30/624411d12844a.png" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="我的第一篇博客"/></a><div class="content"><a class="title" href="/posts/d95d7e09.html" title="我的第一篇博客">我的第一篇博客</a><time datetime="2022-03-28T13:00:00.000Z" title="发表于 2022-03-28 21:00:00">2022-03-28</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022  <i id="heartbeat" class="fa fas fa-heartbeat"></i> 木水</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div><head><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></head></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '3FhzzOf9adU6BTrugxetNi0g-MdYXbMMI',
+      appKey: 'J8477pu5qR8IdlvCb3dfIySL',
+      placeholder: '畅所欲言！',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'https://admin-zlj.github.io/posts/e2294b51.html'
+    this.page.identifier = 'posts/e2294b51.html'
+    this.page.title = '初学者福音 轻松拿捏Flex布局，附有九宫格案列'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://木水.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+}
+
+if ('Valine' === 'Disqus' || !true) {
+  if (true) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script defer id="dsq-count-scr" src="//xianqi.disqus.com/count.js" async></script><script defer type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/js/sakura.js"></script><script defer type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/js/animate.js"></script><div class="aplayer no-destroy" data-id="1073885998" data-server="tencent" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="auto" data-autoplay="true" muted></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":250,"height":400},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
