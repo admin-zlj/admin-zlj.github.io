@@ -130,6 +130,13 @@
 
   
   <url>
+    <loc>https://admin-zlj.github.io/tags/blog/</loc>
+    <lastmod>2022-03-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://admin-zlj.github.io/tags/html/</loc>
     <lastmod>2022-03-30</lastmod>
     <changefreq>daily</changefreq>
@@ -137,21 +144,7 @@
   </url>
   
   <url>
-    <loc>https://admin-zlj.github.io/tags/css3/</loc>
-    <lastmod>2022-03-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://admin-zlj.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2022-03-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://admin-zlj.github.io/tags/blog/</loc>
     <lastmod>2022-03-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -171,17 +164,24 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://admin-zlj.github.io/tags/css3/</loc>
+    <lastmod>2022-03-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
-    <loc>https://admin-zlj.github.io/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://admin-zlj.github.io/categories/%E5%8D%9A%E4%B8%BB/</loc>
     <lastmod>2022-03-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://admin-zlj.github.io/categories/%E5%8D%9A%E4%B8%BB/</loc>
+    <loc>https://admin-zlj.github.io/categories/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-03-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
