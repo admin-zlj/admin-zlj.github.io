@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>https://admin-zlj.github.io/posts/4f36c419.html</loc>
+    
+    <lastmod>2022-04-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://admin-zlj.github.io/posts/96b2360e.html</loc>
     
     <lastmod>2022-04-06</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://admin-zlj.github.io/posts/9202e118.html</loc>
     
     <lastmod>2022-04-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://admin-zlj.github.io/posts/4f36c419.html</loc>
-    
-    <lastmod>2022-04-05</lastmod>
     
   </url>
   
@@ -193,6 +193,27 @@
   </url>
   
   <url>
+    <loc>https://admin-zlj.github.io/tags/React/</loc>
+    <lastmod>2022-04-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://admin-zlj.github.io/tags/bug/</loc>
+    <lastmod>2022-04-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://admin-zlj.github.io/tags/css3/</loc>
+    <lastmod>2022-04-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://admin-zlj.github.io/tags/css/</loc>
     <lastmod>2022-04-12</lastmod>
     <changefreq>daily</changefreq>
@@ -214,28 +235,7 @@
   </url>
   
   <url>
-    <loc>https://admin-zlj.github.io/tags/css3/</loc>
-    <lastmod>2022-04-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://admin-zlj.github.io/tags/JavaScript/</loc>
-    <lastmod>2022-04-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://admin-zlj.github.io/tags/React/</loc>
-    <lastmod>2022-04-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://admin-zlj.github.io/tags/bug/</loc>
     <lastmod>2022-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -258,14 +258,14 @@
   </url>
   
   <url>
-    <loc>https://admin-zlj.github.io/categories/JavaScript%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E9%AB%98%E7%BA%A7%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://admin-zlj.github.io/categories/React/</loc>
     <lastmod>2022-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://admin-zlj.github.io/categories/React/</loc>
+    <loc>https://admin-zlj.github.io/categories/JavaScript%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E9%AB%98%E7%BA%A7%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
