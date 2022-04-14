@@ -6,7 +6,7 @@
   <link href="https://admin-zlj.github.io/atom.xml" rel="self"/>
   
   <link href="https://admin-zlj.github.io/"/>
-  <updated>2022-04-12T05:24:05.989Z</updated>
+  <updated>2022-04-14T06:12:44.182Z</updated>
   <id>https://admin-zlj.github.io/</id>
   
   <author>
@@ -17,18 +17,72 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>React创建项目出现ReactDOM.render is no longer supported in React 18警index.js修改</title>
+    <title>React创建项目报错：You are running `create-react-app` 5.0.0, which is behind the latest release (5.0.1).</title>
+    <link href="https://admin-zlj.github.io/posts/886e11b8.html"/>
+    <id>https://admin-zlj.github.io/posts/886e11b8.html</id>
+    <published>2022-04-14T06:00:00.000Z</published>
+    <updated>2022-04-14T06:12:44.182Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="使用React脚手架创建项目，报错："><a href="#使用React脚手架创建项目，报错：" class="headerlink" title="使用React脚手架创建项目，报错："></a>使用React脚手架创建项目，报错：</h4><pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">create<span class="token operator">-</span>react<span class="token operator">-</span>app app2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>​            <img src="https://img-blog.csdnimg.cn/b6a5a2032ae149d99738ae6fd278aac2.png"><br><img src="https://img-blog.csdnimg.cn/4eb76b37c33340e8869a6c16810f6e89.png"></p><h4 id="如果您之前已create-react-app通过-全局安装"><a href="#如果您之前已create-react-app通过-全局安装" class="headerlink" title="如果您之前已create-react-app通过 全局安装"></a>如果您之前已create-react-app通过 全局安装</h4><pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">npm install <span class="token operator">-</span>g create<span class="token operator">-</span>react<span class="token operator">-</span>app<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>意思是有新版本了，之前安装的版本低了</p><h4 id="1-可以先卸载"><a href="#1-可以先卸载" class="headerlink" title="1.可以先卸载"></a>1.可以先卸载</h4><pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">npm uninstall <span class="token operator">-</span>g create<span class="token operator">-</span>react<span class="token operator">-</span>app<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="2-然后再使用npx临时安装："><a href="#2-然后再使用npx临时安装：" class="headerlink" title="2.然后再使用npx临时安装："></a>2.然后再使用npx临时安装：</h4><pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">npx create<span class="token operator">-</span>react<span class="token operator">-</span>app my<span class="token operator">-</span>app<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="3-如果还不行就加上版本号"><a href="#3-如果还不行就加上版本号" class="headerlink" title="3.如果还不行就加上版本号"></a>3.如果还不行就加上版本号</h4><pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">npx create<span class="token operator">-</span>react<span class="token operator">-</span>app@5<span class="token punctuation">.</span>0<span class="token punctuation">.</span>1 yourApp <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;使用React脚手架创建项目，报错：&quot;&gt;&lt;a href=&quot;#使用React脚手架创建项目，报错：&quot; class=&quot;headerlink&quot; title=&quot;使用React脚手架创建项目，报错：&quot;&gt;&lt;/a&gt;使用React脚手架创建项目，报错：&lt;/h4&gt;&lt;pre clas</summary>
+      
+    
+    
+    
+    <category term="React" scheme="https://admin-zlj.github.io/categories/React/"/>
+    
+    
+    <category term="React" scheme="https://admin-zlj.github.io/tags/React/"/>
+    
+    <category term="bug" scheme="https://admin-zlj.github.io/tags/bug/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react跨域 http-proxy-middleware 无效还是404</title>
+    <link href="https://admin-zlj.github.io/posts/9068ab30.html"/>
+    <id>https://admin-zlj.github.io/posts/9068ab30.html</id>
+    <published>2022-04-14T04:00:00.000Z</published>
+    <updated>2022-04-14T06:15:05.614Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h1 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h1><blockquote><p>今天用<code>http-proxy-middleware</code>的过程中，<code>setupProxy.js</code>文件配置好以后发出请求依然无效还是404</p></blockquote><p>​    <img src="https://img-blog.csdnimg.cn/9444da50435a486c9ce6992899de2d50.png"></p><h3 id="setupProxy-js文件"><a href="#setupProxy-js文件" class="headerlink" title="setupProxy.js文件"></a>setupProxy.js文件</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span> createProxyMiddleware <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"http-proxy-middleware"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">app</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span><span class="token punctuation">;</span>app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">"/ajax"</span><span class="token punctuation">,</span><span class="token function">createProxyMiddleware</span><span class="token punctuation">(</span><span class="token punctuation">{</span>target<span class="token operator">:</span> <span class="token string">"https://i.maoyan.com"</span><span class="token punctuation">,</span>changeOrigin<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span>method<span class="token operator">:</span> <span class="token string">"get"</span><span class="token punctuation">,</span>url<span class="token operator">:</span> <span class="token string">"/ajax/comingList?ci=236&amp;limit=10&amp;movieIds=&amp;token=&amp;optimus_uuid=53D982E0BB3411EC8ECD334B3F83289E1602AC03A72F45D3BF85074D843147F0&amp;optimus_risk_level=71&amp;optimus_code=10"</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>1.首先看看是不是没有重启服务</p><p>2.如果重启还是没有解决</p><ul><li>打开<code>package.js</code></li><li>看一下<code>react-scripts</code>的版本如果低于2.0的话<code>http-proxy-middleware</code>是不支持的，我的就是版本太低，    改成了4.0版本就能请求成功了</li></ul><p>​    <img src="https://img-blog.csdnimg.cn/75723e91431f464a86744ebd53bdc4bf.png"></p><p>​    <img src="https://img-blog.csdnimg.cn/27036d9f1157422b9d31094a9ca3fece.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAYWRtaW5femxq,size_20,color_FFFFFF,t_70,g_se,x_16"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;h1 id=&quot;问题描述：&quot;&gt;&lt;a href=&quot;#问题描述：&quot; class=&quot;headerlink&quot; title=&quot;问题描述：&quot;&gt;&lt;/a&gt;问题描述：&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;今天用&lt;code&gt;http-proxy-middleware&lt;/code&gt;的过程</summary>
+      
+    
+    
+    
+    <category term="React" scheme="https://admin-zlj.github.io/categories/React/"/>
+    
+    
+    <category term="React" scheme="https://admin-zlj.github.io/tags/React/"/>
+    
+    <category term="bug" scheme="https://admin-zlj.github.io/tags/bug/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React创建项目出现ReactDOM.render is no longer supported in React 18警告，index.js修改</title>
     <link href="https://admin-zlj.github.io/posts/f31fcb1e.html"/>
     <id>https://admin-zlj.github.io/posts/f31fcb1e.html</id>
     <published>2022-04-11T04:00:00.000Z</published>
-    <updated>2022-04-12T05:24:05.989Z</updated>
+    <updated>2022-04-14T06:11:52.238Z</updated>
     
-    <content type="html"><![CDATA[<p>当你第一次安装 React 18 时，你会在控制台中看到一个警告：<br><img src="https://img-blog.csdnimg.cn/0f3b482fb6894a3cab96cf1d77a36e2d.png" alt="在这里插入图片描述"><br>因为在 React 18 中，<code>ReactDOM.render</code> 被废弃，当前发出警告，并以兼容模式运行。<br>只需要更改<code>index.js</code>文件即可<br> 改成下面这样警告就会消失:<br> </p><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">"react-dom/client"</span><span class="token punctuation">;</span><span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">"./App"</span><span class="token punctuation">;</span><span class="token keyword">const</span> root <span class="token operator">=</span> ReactDOM<span class="token punctuation">.</span><span class="token function">createRoot</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>root<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p></p><p>废弃的方法还有很多</p><ul><li><code>react-dom</code>:<code>ReactDOM.render</code>已弃用。使用它会警告并在 React 17 模式下运行您的应用程序。</li><li><code> react-dom</code>:<code>ReactDOM.hydrate</code>已弃用。使用它会警告并在 React 17 模式下运行您的应用程序。</li><li> <code>react-dom</code>:<code>ReactDOM.unmountComponentAtNode</code>已弃用。</li><li><code>react-dom</code>:<code>ReactDOM.renderSubtreeIntoContainer</code>已弃用。</li><li> <code>react-dom/server</code>:<code>ReactDOMServer.renderToNodeStream</code>已弃用。</li></ul><p>具体参考官网：<a href="https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html#updates-to-client-rendering-apis">https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html#updates-to-client-rendering-apis</a></p><p>关注我！！！<br>关注我！！！<br>关注我！！！</p>]]></content>
+    <content type="html"><![CDATA[<p>当你第一次安装 React 18 时，你会在控制台中看到一个警告：<br><img src="https://img-blog.csdnimg.cn/0f3b482fb6894a3cab96cf1d77a36e2d.png"><br>因为在 React 18 中，<code>ReactDOM.render</code> 被废弃，当前发出警告，并以兼容模式运行。<br>只需要更改<code>index.js</code>文件即可<br> 改成下面这样警告就会消失:</p> <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">"react-dom/client"</span><span class="token punctuation">;</span><span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">"./App"</span><span class="token punctuation">;</span><span class="token keyword">const</span> root <span class="token operator">=</span> ReactDOM<span class="token punctuation">.</span><span class="token function">createRoot</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>root<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>废弃的方法还有很多</p><ul><li><code>react-dom</code>:<code>ReactDOM.render</code>已弃用。使用它会警告并在 React 17 模式下运行您的应用程序。</li><li><code> react-dom</code>:<code>ReactDOM.hydrate</code>已弃用。使用它会警告并在 React 17 模式下运行您的应用程序。</li><li> <code>react-dom</code>:<code>ReactDOM.unmountComponentAtNode</code>已弃用。</li><li><code>react-dom</code>:<code>ReactDOM.renderSubtreeIntoContainer</code>已弃用。</li><li> <code>react-dom/server</code>:<code>ReactDOMServer.renderToNodeStream</code>已弃用。</li></ul><p>具体参考官网：<a href="https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html#updates-to-client-rendering-apis">https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html#updates-to-client-rendering-apis</a></p><p>关注我！！！<br>关注我！！！<br>关注我！！！</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;当你第一次安装 React 18 时，你会在控制台中看到一个警告：&lt;br&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/0f3b482fb6894a3cab96cf1d77a36e2d.png&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;br&gt;因为在 </summary>
+    <summary type="html">&lt;p&gt;当你第一次安装 React 18 时，你会在控制台中看到一个警告：&lt;br&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/0f3b482fb6894a3cab96cf1d77a36e2d.png&quot;&gt;&lt;br&gt;因为在 React 18 中，&lt;code</summary>
       
     
     
